@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MikelyonsBlog</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+        <%= stylesheet_link_tag     "http://fonts.googleapis.com/css?family=Shanti" %>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <%= csrf_meta_tags %>
+        <%= yield :page_includes %>
 
-<%= yield %>
+        <style type="text/css">
+            @font-face
+            {
+                font-family: "iconfont";
+                src: url("Socialico.ttf") format(truetype);
+            }
+        
+            @font-face
+            {
+                font-family: "iconfont2";
+                src: url("SocialicoPlus.ttf") format(truetype);
+            }
+        
+        </style>
+        
+        <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.14.1/build/cssreset/cssreset-min.css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        
+        <link href="main.css" media="screen" rel="stylesheet" />
+        <link href="main-variable.css" media="screen" rel="stylesheet" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="full_width">
+                <div id="name" class="hover">
+                    Mike Lyons
+                </div>
+                <div id="menu">
+                    <div id="hidden_menu" class="left">
+                        <a class="hover" href="#">Home</a>
+                        <a class="hover" href="#">Projects</a>
+                        <a class="hover" href="#">Bio</a>
+                    </div>
+                    <div id="shown_menu" class="right">
+                        <a class="hover" href="#">Menu</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div id="image_area"></div>
+        <div id="content_area">
+            <div class="full_width">
 
-</body>
+                <%= yield %>
+
+            </div>
+        </div>
+    </body>
 </html>

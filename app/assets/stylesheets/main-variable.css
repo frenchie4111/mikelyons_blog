@@ -1,0 +1,63 @@
+:root
+{
+    var-green: #858e3b;
+    var-green-gray: #8d8f7e;
+    
+    var-menu-text-color: black;
+    var-menu-text-hover-color: #8b8c83;
+    
+    var-menu-bg-color: white;
+    var-content-area-bg-color: white;
+    
+    var-content-area-h2-color: #8b8c83;
+    var-content-area-h3-color: #8b8c83;
+    var-content-area-border-color: #eee;
+    
+    var-content-area-more-info-color: #8b8c83;
+}
+
+#header
+{
+    background-color: var(menu-bg-color);
+}
+
+.hover:link
+{
+    color: var(menu-text-color);
+}
+
+.hover:visited
+{
+    color: var(menu-text-color);
+}
+
+.hover:hover
+{
+    color: var(menu-text-hover-color);
+}
+
+#content_area
+{
+    background-color: var(content-area-bg-color);
+}
+
+#content_area h2
+{
+    color: var(content-area-h2-color);
+    border-bottom-color: var(content-area-border-color);
+}
+
+#content_area h3
+{
+    color: var(content-area-h3-color);
+}
+
+#content_area b
+{
+    color: var(content-area-h2-color);
+}
+
+.more_info
+{
+    color: var(content-area-more-info-color);
+}
