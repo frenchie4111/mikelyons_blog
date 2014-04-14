@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140414202524) do
+ActiveRecord::Schema.define(version: 20140414205432) do
 
   create_table "admin_actions", force: true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories_posts", id: false, force: true do |t|
+    t.integer "category_id"
+    t.integer "post_id"
   end
 
   create_table "post", force: true do |t|

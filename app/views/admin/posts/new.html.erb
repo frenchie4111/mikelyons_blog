@@ -10,6 +10,8 @@
     <a>Content:</a><br/>
     <%= f.text_area :content, style: "margin-left: 5px; width: 945px; height: 500px;" %>
 
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+
     <br/>
     <%= f.submit %><a id="update_text"></a>
 <% end %>
