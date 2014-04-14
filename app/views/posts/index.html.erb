@@ -15,7 +15,7 @@ end
                 <%= post.subject %>
                 <div class="clear"></div>
             </div>
-            <div class="more_info"><div class="left">Technologies: TBC</div><div class="right">Posted: <%= post.created_at %></div></div>
+            <div class="more_info"><div class="left">Technologies: <% post.categories.all.each do |category| %><%= category.name %><% end %></div><div class="right">Posted: <%= post.created_at.strftime("%m/%d/%Y") %></div></div>
             <div class="clear"></div>
         </div>
     <% end %>
@@ -23,6 +23,10 @@ end
 <div class="column right one_third_width">
     <h2>Post Catagories</h2>
     <ul class="square_list">
-        <li>TBC</li>
+        <% @categories.each do |category| %>
+            <li>
+                <%= category.name %>
+            </li>
+        <% end %>
     </ul>
 </div>

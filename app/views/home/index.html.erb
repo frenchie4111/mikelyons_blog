@@ -46,7 +46,7 @@ end
         <div class="column_post">
             <b><%= post.title %></b>
             <%= post.subject %>
-            <div class="more_info"><div class="left">Category: TBC</div><div class="right">Posted: <%= post.created_at.strftime("%m/%d/%Y") %></div></div>
+            <div class="more_info"><div class="left">Category: <% post.categories.all.each do |category| %><%= category.name %><% end %></div><div class="right">Posted: <%= post.created_at.strftime("%m/%d/%Y") %></div></div>
             <div class="clear"></div>
         </div>
     <% end %>

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140414205432) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admin_actions", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -29,15 +32,6 @@ ActiveRecord::Schema.define(version: 20140414205432) do
   create_table "categories_posts", id: false, force: true do |t|
     t.integer "category_id"
     t.integer "post_id"
-  end
-
-  create_table "post", force: true do |t|
-    t.text     "title"
-    t.text     "subject"
-    t.text     "content"
-    t.datetime "posted"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "posts", force: true do |t|
