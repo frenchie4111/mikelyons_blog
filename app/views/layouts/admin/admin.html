@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mike Lyons - Software Engineer</title>
+    <%= stylesheet_link_tag    "http://fonts.googleapis.com/css?family=Shanti" %>
+    <%= stylesheet_link_tag    "admin/application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "admin/application", "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+    <%= yield :page_includes %>
+</head>
+<body>
+
+    <%= render file: "layouts/admin/menu" %>
+    <div id='main_container'>
+        <!-- <div class='left_box'>
+            <div style='font-size: 20px;margin:5px;'> Actions: </div>
+            <a href='pages/'><div class='button'>Manage Pages</div></a>
+            <a href='stylesheets/'><div class='button'>Manage Stylesheets</div></a>
+            <a href='menu/'><div class='button'>Manage Menu</div></a>
+            <a href='pictures/'><div class='button'>Manage Gallery</div></a>
+            <a href='uploads/'><div class='button'>Manage Uploads</div></a>
+            <div style='font-size: 20px;margin:5px;'> Advanced Actions: </div>
+            <a href='users/'><div class='button'>Manage Users</div></a>
+            <a href='scripts/'><div class='button'>Manage Scripts</div></a>
+        </div>
+        <div class='right_box'>
+            <a style='font-size: 20px;'>Action Log</a>
+            <table class='table'>
+                <thead>
+                    <th>User</th>
+                    <th>Action</th>
+                </thead>
+                <tbody id='log_preview'>
+                </tbody>
+            </table>
+            <a href='log/'><div class='button'>View Full Log</div></a>
+        </div> -->
+        <%= yield %>
+    </div>
+
+</body>
+</html>

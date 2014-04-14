@@ -1,0 +1,28 @@
+<%
+content_for :page_includes do
+    stylesheet_link_tag('main') + 
+    stylesheet_link_tag('main-variable') + 
+    javascript_include_tag('main')
+end
+%>
+
+<div class="column left two_thirds_width">
+    <h2>Posts</h2>
+    <% @posts.each do |post| %>
+        <div class="column_post project">
+            <div>
+                <b><%= post.title %></b>
+                <%= post.subject %>
+                <div class="clear"></div>
+            </div>
+            <div class="more_info"><div class="left">Technologies: TBC</div><div class="right">Posted: <%= post.created_at %></div></div>
+            <div class="clear"></div>
+        </div>
+    <% end %>
+</div>
+<div class="column right one_third_width">
+    <h2>Post Catagories</h2>
+    <ul class="square_list">
+        <li>TBC</li>
+    </ul>
+</div>

@@ -1,0 +1,20 @@
+<% provide(:back, "/admin") %>
+
+<table class='table'>
+    <thead>
+        <th style='width: 20px;'>ID</th>
+        <th style='width: 100px;'>Timestamp</th>
+        <th style='width: 200px;'>Title</th>
+        <th>Description</th>
+    </thead>
+    <tbody id='rows'>
+            <% @actions.each do |action| %>
+                <tr>
+                    <td><%= action.id.to_s %></td>
+                    <td><%= action.created_at.asctime %></td>
+                    <td><%= action.title %></td>
+                    <td><%= action.description %></td>
+                </tr>
+            <% end %>
+    </tbody>
+</table>

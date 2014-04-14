@@ -1,5 +1,14 @@
 MikelyonsBlog::Application.routes.draw do
-  root 'home#index'
+
+  root "home#index"
+
+  resources :posts
+
+  namespace :admin do
+    root "home#index"
+    resources :posts
+    resources :admin_actions
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,28 @@
+<div class='left_box'>
+    <div style='font-size: 20px;margin:5px;'> Actions: </div>
+
+    <%= link_to( "admin/posts/" ) do %>
+        <div class='button'>Manage Blog Posts</div>
+    <% end %>
+</div>
+
+<div class='right_box'>
+    <a style='font-size: 20px;'>Action Log</a>
+    <table class='table'>
+        <thead>
+            <th>Time</th>
+            <th>Action</th>
+        </thead>
+        <tbody id='log_preview'>
+            <% @actions.each do |action| %>
+                <tr>
+                    <td><%= action.created_at.asctime %></td>
+                    <td><%= action.title.to_s %></td>
+                </tr>
+            <% end %>
+        </tbody>
+    </table>
+    <%= link_to( admin_admin_actions_path ) do %>
+        <div class='button'>View Full Log</div>
+    <% end %>
+</div>

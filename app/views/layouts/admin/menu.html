@@ -1,0 +1,25 @@
+<div id='menu_container'>
+    <div id='menu_header'>
+        Lyons CMS
+    </div>
+    <div id='menu_buttons'>
+
+        <%= link_to( yield :back ) do %>
+            <div class='button menu_button' style='margin: 0px; padding: 7px;' class='button'>
+                Back
+            </div>
+        <% end %>
+
+        <%= link_to( "/admin" ) do %>
+            <div class='button menu_button' style='margin: 0px; padding: 7px;' class='button'>
+                Home
+            </div>
+        <% end %>
+
+        <a href='#'>
+            <div class='button menu_button' style='margin: 0px; margin-right: 5px; padding: 7px;' class='button'>
+                Logout
+            </div>
+        </a>
+    </div>
+</div>

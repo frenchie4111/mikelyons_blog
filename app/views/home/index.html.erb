@@ -42,31 +42,16 @@ end
 </div>
 <div class="column left one_third_width">
     <h2>Recent Posts</h2>
-    <div class="column_post">
-        <b>New Idea!</b>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et enim orci. Praesent lobortis volutpat rutrum.
-        <div class="more_info"><div class="left">Category: Gore</div><div class="right">Posted: 03/20/1994</div></div>
-        <div class="clear"></div>
-    </div>
-    <div class="column_post">
-        <b>Code Blocks Failures</b>
-        Unteger lacinia, erat eu volutpat facilisis, eros leo varius tellus, sit amet ultricies ligula augue vel ipsum.
-        <div class="more_info"><div class="left">Category: IDEs Suck</div><div class="right">Posted: 04/08/1994</div></div>
-        <div class="clear"></div>
-    </div>
-    <div class="column_post">
-        <b>Who is this guy??</b>
-        Duis diam magna, facilisis non pharetra sit amet, consequat sed sapien. Vivamus quam lacus, aliquam blandit ultricies vitae, egestas at mi.
-        <div class="more_info"><div class="left">Category: Mystery</div><div class="right">Posted: 09/16/1996</div></div>
-        <div class="clear"></div>
-    </div>
-    <div class="column_post">
-        <b>Why am I even doing this?</b>
-        <a>Vun volutpat libero dui, vitae scelerisque mauris tristique eu. Fusce nec nisi ut lorem dapibus fringilla molestie sit amet nisl.</a>
-        <div class="more_info"><div class="left">Category: Mystery</div><div class="right">Posted: 06/07/1963</div></div>
-        <div class="clear"></div>
-    </div>
-    <h3 class="more_info_link"><a href="more_posts.html">See more posts</a></h3>
+    <% @recent_posts.each do |post| %>
+        <div class="column_post">
+            <b><%= post.title %></b>
+            <%= post.subject %>
+            <div class="more_info"><div class="left">Category: TBC</div><div class="right">Posted: <%= post.created_at.strftime("%m/%d/%Y") %></div></div>
+            <div class="clear"></div>
+        </div>
+    <% end %>
+
+    <h3 class="more_info_link"><a href="/posts">See more posts</a></h3>
 </div>
 <div class="column right one_third_width">
     <h2>About Me</h2>

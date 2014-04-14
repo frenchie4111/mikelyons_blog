@@ -1,0 +1,14 @@
+<% provide(:back, "/admin/posts") %>
+<%= form_for( @post, url:admin_post_path(@post), :remote => true) do |f| %>
+    <%= f.label :title %>: <%= f.text_field :title, content: @post.title, style: "width: 500px;" %>
+    <br/>
+
+    <%= f.label :subject %>: <%= f.text_field :subject, content: @post.subject, style: "width: 500px;" %>
+    <br/>
+
+    <a>Content:</a><br/>
+    <%= f.text_area :content, content: @post.content, style: "margin-left: 5px; width: 945px; height: 500px;" %>
+
+    <br/>
+    <%= f.submit %><a id="update_text"></a>
+<% end %>

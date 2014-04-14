@@ -1,0 +1,10 @@
+<%
+content_for :page_includes do
+    stylesheet_link_tag('main') + 
+    stylesheet_link_tag('main-variable') + 
+    javascript_include_tag('main')
+end
+%>
+
+<h2><%= @post.title %></h2>
+<%= @post.content %>

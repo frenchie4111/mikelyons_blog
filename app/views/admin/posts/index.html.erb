@@ -1,0 +1,35 @@
+<% provide(:back, "/admin") %>
+
+<table class='table'>
+    <thead>
+        <th style='width: 20px;'>ID</th>
+        <th style='width: 100px;'>Timestamp</th>
+        <th style='width: 200px;'>Title</th>
+        <th>Subject</th>
+        <th style='width:130px;'></th>
+    </thead>
+    <tbody id='rows'>
+            <% @posts.each do |post| %>
+                <tr data-id="<%= post.id.to_s %>">
+                    <td><%= post.id.to_s %></td>
+                    <td><%= post.created_at.strftime("%m/%d/%Y") %></td>
+                    <td><%= post.title %></td>
+                    <td><%= truncate( post.subject, length: 75, seperator: " ", ommision: "..." ) %></td>
+                    <td>
+                        <%= link_to( edit_admin_post_path(post) ) do %>
+                            <div class='button edit' style='display:inline-block;'>Edit</div>
+                        <% end %>
+
+                        <%= link_to( admin_post_path(post), method: :delete, confirm: "Are you sure? (Cannot be undone)", remote: true ) do %>
+                            <div class='button delete' style='display:inline-block;'>Delete</div>
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+    </tbody>
+</table>
+
+
+<%= link_to( new_admin_post_path ) do %>
+    <div class='button' id='#new_page'>New Page</div>
+<% end %>
