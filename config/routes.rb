@@ -2,6 +2,7 @@ MikelyonsBlog::Application.routes.draw do
 
   root "home#index"
 
+  get '/posts/category/:category', to: 'posts#show_category', as: :blog_category
   resources :posts
 
   namespace :admin do

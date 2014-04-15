@@ -8,36 +8,7 @@ end
 
 <div class="column left one_third_width">
     <h2>Projects</h2>
-    <div class="column_post project">
-        <div>
-            <%= image_tag "sassyseven.png" %>
-            <b>Sassy Seven</b>
-            iPhone application created for Apple iOS Hackathon 2013
-            <div class="clear"></div>
-        </div>
-        <div class="more_info"><div class="left">Technologies: Obj-C, iOS</div><div class="right">Posted: 03/20/1994</div></div>
-        <div class="clear"></div>
-    </div>
-    <div class="column_post project">
-        <div>
-            <%= image_tag "sts.png" %>
-            <b>Shake to Shuffle</b>
-            Android Application intended to bring iOS shake to shuffle functionality to Android
-            <div class="clear"></div>
-        </div>
-        <div class="more_info"><div class="left">Technologies: Obj-C, iOS</div><div class="right">Posted: 03/20/1994</div></div>
-        <div class="clear"></div>
-    </div>
-    <div class="column_post project">
-        <div>
-            <%= image_tag "ttc.png" %>
-            <b>Texts To Computer</b>
-            Android app that sends text messages to Xmpp server, allowing messages to be sent from a computer
-            <div class="clear"></div>
-        </div>
-        <div class="more_info"><div class="left">Technologies: Obj-C, iOS</div><div class="right">Posted: 03/20/1994</div></div>
-        <div class="clear"></div>
-    </div>
+    <%= render partial: "partials/post", collection: @projects %>
     <h3 class="more_info_link"><a href="projects.html">See All My Projects</a></h3>
 </div>
 <div class="column left one_third_width">
@@ -51,7 +22,6 @@ end
     <div class="column_post">
         <b>My name is Mike Lyons</b>
         , and I am a Software Engineering student at Rochester Institute of Technology. I am a dedicated and brilliant programmer who enjoys applying his programing knowledge to solve a variety of problems. I am currently looking for Co-ops or Internships as a software engineer. 
-        <h3 class="more_info_link">More About Me</h3>
     </div>
     <div class="column_spacer"></div>
     <h2>Find Me Elsewhere</h2>
