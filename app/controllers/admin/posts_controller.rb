@@ -6,15 +6,17 @@ class Admin::PostsController < Admin::ApplicationController
     def new
         @post = Post.new
         @categories = Category.all
+        @post_images = PostImage.all
     end
 
     def edit
         @post = Post.find( params[:id] )
         @categories = Category.all
+        @post_images = PostImage.all
     end
 
     def create
-        new_post = Post.new( params[:post].permit( :title, :subject, :content ) )
+        new_post = Post.new( params[:post].permit( :title, :subject, :content, :post_image_id ) )
         new_post.save()
 
         params[:post][:category_ids].each do |id|
@@ -31,7 +33,7 @@ class Admin::PostsController < Admin::ApplicationController
     def update
         post = Post.find( params[:id] )
 
-        post.update_attributes(params[:post].permit( :title, :subject, :content ) )
+        post.update_attributes(params[:post].permit( :title, :subject, :content, :post_image_id ) )
 
         post.categories.clear
         params[:post][:category_ids].each do |id|

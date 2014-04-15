@@ -10,7 +10,15 @@
     <a>Content:</a><br/>
     <%= f.text_area :content, style: "margin-left: 5px; width: 945px; height: 500px;" %>
 
-    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |b| %>
+        <div>
+            <%= b.check_box %>
+            <%= b.label %>
+        </div>
+    <% end %>
+
+
+    <%= f.select(:post_image_id, @post_images.map{ |image| [image.name, image.id] }) %>
 
     <br/>
     <%= f.submit %><a id="update_text"></a>

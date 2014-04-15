@@ -8,17 +8,7 @@ end
 
 <div class="column left two_thirds_width">
     <h2>Posts</h2>
-    <% @posts.each do |post| %>
-        <div class="column_post project">
-            <div>
-                <b><%= post.title %></b>
-                <%= post.subject %>
-                <div class="clear"></div>
-            </div>
-            <div class="more_info"><div class="left">Technologies: <% post.categories.all.each do |category| %><%= category.name %><% end %></div><div class="right">Posted: <%= post.created_at.strftime("%m/%d/%Y") %></div></div>
-            <div class="clear"></div>
-        </div>
-    <% end %>
+    <%= render partial: "partials/post", collection: @posts %>
 </div>
 <div class="column right one_third_width">
     <h2>Post Catagories</h2>

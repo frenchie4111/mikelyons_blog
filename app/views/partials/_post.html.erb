@@ -1,0 +1,12 @@
+<div class="column_post project">
+    <div>
+        <% if post.post_image then %>
+        <%= image_tag post.post_image.image_url.to_s %>
+        <% end %>
+        <%= link_to( post ) do %><b><%= post.title %></b><% end %>
+        <%= post.subject %>
+        <div class="clear"></div>
+    </div>
+    <div class="more_info"><div class="left">Categories:&nbsp;<%= render( partial: "partials/category", collection: post.categories.all, spacer_template: "partials/category_spacer") || "None" %></div><div class="right">Posted: <%= post.created_at.strftime("%m/%d/%Y") %></div></div>
+    <div class="clear"></div>
+</div>
