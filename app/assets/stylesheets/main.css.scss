@@ -40,11 +40,12 @@ body
     background-color: white;
 }
 
-#name
+#name, #name:visited, #name:link
 {
     float: left;
     font-size: 26px;
     margin: 10px 0 8px 8px;
+    color: #000;
 }
 
 #menu
@@ -161,7 +162,7 @@ body
 
 .social_media div
 {
-    height: 30px;
+    height: 24px;
 }
 
 .social_media_link
@@ -187,4 +188,10 @@ body
 {
     list-style-type: square;
     padding: 0px 0px 0px 25px;
+}
+
+.square_list, a:link, a:visited
+{
+    color: #8b8c83;
+    text-decoration: none;
 }

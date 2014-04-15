@@ -13,10 +13,6 @@ end
 <div class="column right one_third_width">
     <h2>Post Catagories</h2>
     <ul class="square_list">
-        <% @categories.each do |category| %>
-            <li>
-                <%= category.name %>
-            </li>
-        <% end %>
+        <%= render partial: "partials/category_li", collection: @categories %>
     </ul>
 </div>

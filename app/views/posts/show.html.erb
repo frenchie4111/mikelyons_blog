@@ -7,4 +7,4 @@ end
 %>
 
 <h2><%= @post.title %></h2>
-<%= @post.content %>
+<%= raw(@post.content) %>

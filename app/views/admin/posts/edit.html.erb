@@ -1,3 +1,9 @@
+<%
+content_for :page_includes do
+    javascript_include_tag('admin/posts')
+end
+%>
+
 <% provide(:back, "/admin/posts") %>
 <%= form_for( @post, url:admin_post_path(@post), :remote => true) do |f| %>
     <%= f.label :title %>: <%= f.text_field :title, content: @post.title, style: "width: 500px;" %>
@@ -17,7 +23,7 @@
     <% end %>
 
 
-    <%= f.select(:post_image_id, @post_images.map{ |image| [image.name, image.id] }) %>
+    <%= f.select(:post_image_id, [["None", 0]] + @post_images.map{ |image| [image.name, image.id] }) %>
 
     <br/>
     <%= f.submit %><a id="update_text"></a>

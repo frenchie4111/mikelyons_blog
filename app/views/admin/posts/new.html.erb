@@ -18,7 +18,7 @@
     <% end %>
 
 
-    <%= f.select(:post_image_id, @post_images.map{ |image| [image.name, image.id] }) %>
+    <%= f.select(:post_image_id, [["None", 0]] + @post_images.map{ |image| [image.name, image.id] }) %>
 
     <br/>
     <%= f.submit %><a id="update_text"></a>
