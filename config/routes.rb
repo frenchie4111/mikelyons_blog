@@ -7,6 +7,7 @@ MikelyonsBlog::Application.routes.draw do
   namespace :admin do
     root "home#index"
     resources :posts
+    resources :categories
     resources :admin_actions
     resources :images
   end

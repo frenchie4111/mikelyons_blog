@@ -10,6 +10,8 @@ class Admin::ImagesController < Admin::ApplicationController
     def create
         PostImage.create( params[:post_image].permit(:name, :image) )
 
+        AdminAction.create( title: "Uploaded Image", description: "Image " + params[:post_image][:name] )
+
         redirect_to "/admin/images#index"
     end
 

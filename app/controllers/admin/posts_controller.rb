@@ -23,6 +23,8 @@ class Admin::PostsController < Admin::ApplicationController
             end
         end
 
+        AdminAction.create( title: "Created Post", description: "Created Post " + new_post.id.to_s + " with content: " + params[:post][:content] )
+
         redirect_to "/admin/posts#index"
     end
 
@@ -38,7 +40,7 @@ class Admin::PostsController < Admin::ApplicationController
             end
         end
 
-        AdminAction.create( title: "Updated Post", description: "Updated Post " + params[:id] = " to content: " + params[:post][:content] )
+        AdminAction.create( title: "Updated Post", description: "Updated Post " + params[:id] + " to content: " + params[:post][:content] )
 
         respond_to do |format|
             format.js
@@ -48,6 +50,8 @@ class Admin::PostsController < Admin::ApplicationController
     def destroy
         @id = params[:id]
         Post.find(params[:id]).destroy()
+
+        AdminAction.create( title: "Deleted Post", description: "Deleted Post " + params[:id] )
 
         respond_to do |format|
             format.js
