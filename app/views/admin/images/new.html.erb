@@ -1,0 +1,9 @@
+<% provide(:back, "/admin/posts") %>
+
+<%= form_for @image, url: { action: "create" }, :html => {:multipart => true} do |f| %>
+    <%= f.label :name %><%= f.text_field :name %>
+
+    <%= f.file_field :image %>
+
+    <%= f.submit %>
+<% end %>

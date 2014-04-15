@@ -1,0 +1,30 @@
+<% provide(:back, "/admin") %>
+
+<table class='table'>
+    <thead>
+        <th style='width: 20px;'>ID</th>
+        <th>Name</th>
+        <th style='width:130px;'></th>
+    </thead>
+    <tbody id='rows'>
+            <% @images.each do |image| %>
+                <tr data-id="<%= image.id.to_s %>">
+                    <td><%= image.id.to_s %></td>
+                    <td><%= image.name %></td>
+                    <td>
+                        <%= link_to( image.image_url.to_s ) do %>
+                            <div class='button edit' style='display:inline-block;'>View</div>
+                        <% end %>
+                        <%= link_to( admin_image_path(image), method: :delete, confirm: "Are you sure? (Cannot be undone)", remote: true ) do %>
+                            <div class='button delete' style='display:inline-block;'>Delete</div>
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+    </tbody>
+</table>
+
+
+<%= link_to( new_admin_image_path ) do %>
+    <div class='button' id='#new_page'>New Image</div>
+<% end %>

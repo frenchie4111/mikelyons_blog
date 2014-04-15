@@ -8,6 +8,7 @@ MikelyonsBlog::Application.routes.draw do
     root "home#index"
     resources :posts
     resources :admin_actions
+    resources :images
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
