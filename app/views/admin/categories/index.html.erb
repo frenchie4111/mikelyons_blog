@@ -1,0 +1,31 @@
+<% provide(:back, "/admin") %>
+
+<table class='table'>
+    <thead>
+        <th style='width: 20px;'>ID</th>
+        <th>Name</th>
+        <th style='width:130px;'></th>
+    </thead>
+    <tbody id='rows'>
+            <% @categories.each do |category| %>
+                <tr data-id="<%= category.id.to_s %>">
+                    <td><%= category.id.to_s %></td>
+                    <td><%= category.name %></td>
+                    <td>
+                        <%= link_to( edit_admin_category_path(category) ) do %>
+                            <div class='button edit' style='display:inline-block;'>Edit</div>
+                        <% end %>
+
+                        <%= link_to( admin_category_path(category), method: :delete, confirm: "Are you sure? (Cannot be undone)", remote: true ) do %>
+                            <div class='button delete' style='display:inline-block;'>Delete</div>
+                        <% end %>
+                    </td>
+                </tr>
+            <% end %>
+    </tbody>
+</table>
+
+
+<%= link_to( new_admin_category_path ) do %>
+    <div class='button' id='#new_page'>New Category</div>
+<% end %>

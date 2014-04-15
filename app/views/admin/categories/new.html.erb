@@ -1,0 +1,7 @@
+<% provide(:back, "/admin/categories") %>
+<%= form_for( @category, url: { action: "create" } ) do |f| %>
+    <%= f.label :name %>: <%= f.text_field :name, style: "width: 500px;" %>
+
+    <br/>
+    <%= f.submit %>
+<% end %>
