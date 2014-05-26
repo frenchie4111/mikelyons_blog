@@ -27,7 +27,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'carrierwave'
-gem 'fog'
+gem 'carrierwave-aws'
 gem 'highlight_js-rails'
 
 group :production do

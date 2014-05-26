@@ -1,33 +1,12 @@
 CarrierWave.configure do |config|
-  config.fog_credentials = {
-    # Configuration for Amazon S3 should be made available through an Environment variable.
-    # For local installations, export the env variable through the shell OR
-    # if using Passenger, set an Apache environment variable.
-    #
-    # In Heroku, follow http://devcenter.heroku.com/articles/config-vars
-    #
-    # $ heroku config:add S3_KEY=your_s3_access_key S3_SECRET=your_s3_secret S3_REGION=eu-west-1 S3_ASSET_URL=http://assets.example.com/ S3_BUCKET_NAME=s3_bucket/folder
- 
-    # Configuration for Amazon S3
-    :provider              => 'AWS',
-    :aws_access_key_id     => ENV['AWS_ACCESS_KEY_ID'],
-    :aws_secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
-    :region                => ENV['AWS_S3_REGION']
+  config.storage    = :aws
+  config.aws_bucket = ENV['AWS_S3_BUCKET_NAME']
+  config.aws_acl    = :public_read
+  config.asset_host = 'http://s3.amazonaws.com/mikelyons-blog'
+  config.aws_authenticated_url_expiration = 60 * 60 * 24 * 365
+
+  config.aws_credentials = {
+    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
   }
- 
-  # For testing, upload files to local `tmp` folder.
-  if Rails.env.test? || Rails.env.cucumber?
-    config.storage = :file
-    config.enable_processing = false
-    config.root = "#{Rails.root}/tmp"
-  else
-    config.storage = :fog
-  end
- 
-  config.cache_dir = "#{Rails.root}/tmp/uploads"                  # To let CarrierWave work on heroku
- 
-  config.fog_directory    = ENV['AWS_S3_BUCKET_NAME']
-  # config.s3_access_policy = :public_read                          # Generate http:// urls. Defaults to :authenticated_read (https://)
-  config.fog_use_ssl_for_aws = false
-  config.fog_host         = "#{ENV['AWS_S3_ASSET_URL']}/#{ENV['AWS_S3_BUCKET_NAME']}"
 end
