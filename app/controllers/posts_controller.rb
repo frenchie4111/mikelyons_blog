@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       content.gsub( /\[IMG\s+(?<name>[^\]]+)\]/ ) do |m|
         image = PostImage.find_by( name: $1 )
         if image then
-          "<img src=\"" + image.image_url.to_s + "\">"
+          "src=\"" + image.image_url.to_s
         end
       end
     end
