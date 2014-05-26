@@ -1,13 +1,13 @@
 <%
 content_for :page_includes do
-    stylesheet_link_tag('main') + 
-    stylesheet_link_tag('main-variable') + 
+    stylesheet_link_tag('main') +
+    stylesheet_link_tag('main-variable') +
     javascript_include_tag('main')
 end
 %>
 
 <div class="column left two_thirds_width">
-    <h2>Posts</h2>
+    <h2>Posts<% if @category_name then %> : <%= @category_name %><% end %></h2>
     <%= render partial: "partials/post", collection: @posts %>
 </div>
 <div class="column right one_third_width">

@@ -11,6 +11,7 @@ class PostsController < ApplicationController
 
   def show_category
     @posts = Category.find( params[:category] ).posts.all
+    @category_name = Category.find( params[:category] ).name
     @categories = Category.all
 
     render "posts/index"
