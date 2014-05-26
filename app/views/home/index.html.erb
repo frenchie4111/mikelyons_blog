@@ -7,15 +7,14 @@ end
 %>
 
 <div class="column left one_third_width">
-    <h2>Projects</h2>
-    <%= render partial: "partials/post", collection: @projects %>
-    <h3 class="more_info_link"><a href="/posts/category/1">See All My Projects</a></h3>
+    <h2>Featured Posts</h2>
+    <%= render partial: "partials/post", collection: @featured_posts %>
     <div class="clear"></div>
 </div>
 <div class="column left one_third_width">
     <h2>Recent Posts</h2>
     <%= render partial: "partials/post", collection: @recent_posts %>
-    <h3 class="more_info_link"><a href="/posts">See more posts</a></h3>
+    <h3 class="more_info_link"><a style="font-size:16px" href="/posts">See More Posts</a></h3>
     <div class="clear"></div>
 </div>
 <div class="column right one_third_width">

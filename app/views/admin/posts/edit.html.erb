@@ -24,6 +24,8 @@ end
 
 
     <%= f.select(:post_image_id, [["None", 0]] + @post_images.map{ |image| [image.name, image.id] }) %>
+    <br/>
+    <%= f.check_box :featured, :value => @post.featured %><%= f.label :featured %>
 
     <br/>
     <%= f.submit %><a id="update_text"></a>
