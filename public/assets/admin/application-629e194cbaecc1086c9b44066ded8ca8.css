@@ -1,0 +1,205 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body
+{
+    font-family: 'Shanti', sans-serif;
+    background-color: #cccccc;
+    color: #222222;
+    background: url(/blog_images/white_stripe.png);
+    background-repeat: repeat;
+}
+a:link
+{
+    text-decoration: none;
+}
+#menu_header
+{
+    display: inline-block;
+    padding: 5px;
+    float:left;
+}
+#menu_buttons
+{
+    display: inline-block;
+    float: right;
+}
+.menu_button
+{
+    display: inline-block;
+    margin: 0px;
+}
+#menu_container
+{
+    margin: 0px auto;
+    margin-bottom: 10px;
+    width: 960px;
+    height: 30px;
+    font-size: 20px;
+    background-color: #E5E5E5;
+    border: 1px solid #BBBBBB;
+    border-top: 0px;
+}
+
+#main_container
+{
+    position: relative;
+    background-color: #E5E5E5;
+    margin: 0px auto;
+    width: 960px;
+    border: 1px solid #BBBBBB;
+    min-height: 600px;
+}
+
+#quick_jump_menu
+{
+    width: 200px; 
+    position: absolute; 
+    top: 34px;
+    left: -1px; 
+    z-index: 10;
+    background-color: #FFF;
+    border:1px solid #BBBBBB;
+}
+
+.right_box
+{
+    float:right; 
+    width: 300px;
+    text-align:center;
+    background-color:#FFF;
+    border:1px solid #BBBBBB;
+    margin: 5px;
+    margin-left: 0px;
+}
+.left_box
+{
+    float:left; 
+    width: 640px;
+    text-align:left;
+    background-color:#FFF;
+    border:1px solid #BBBBBB;
+    margin: 5px;
+    margin-right: 0px;
+}
+
+.table
+{
+    table-layout: fixed;
+    width: 100%;
+    color: #444;
+}
+.table tbody tr, .table thead tr
+{
+    border-bottom: 1px solid #BBBBBB;
+}
+.table th
+{
+    height: 30px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 5px;
+}
+.table td
+{
+    padding-left: 5px;
+    vertical-align: middle;
+}
+.table tr:hover
+{
+    background-color: #FFF;
+}
+.no_hover:hover
+{
+    background-color: red;
+}
+
+.content
+{
+    margin: 5px;
+}
+.subtle_button
+{
+    padding: 6px;
+    display: inline-block;
+}
+.subtle_button:hover
+{
+    padding: 5px;
+    margin: auto;
+    cursor: pointer;
+    border: 1px solid #BBBBBB;
+}
+
+.button
+{
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    margin: 5px;
+    color: #888888;
+    background-color: #FFF;
+    border: 1px solid #BBBBBB;
+}
+.button:link, .button:visited
+{
+    color: #888888;
+    text-decoration: none;
+}
+.button:hover
+{
+    color:#222;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.button a:link, .button a:visited, .button a
+{
+    color: #000;
+    text-decoration: none;
+}
