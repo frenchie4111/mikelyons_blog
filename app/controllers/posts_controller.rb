@@ -17,6 +17,13 @@ class PostsController < ApplicationController
     render "posts/index"
   end
 
+  def work
+    @post = Post.where("title = 'Work Experience'").first
+    @post.content = add_images( @post.content )
+
+    render "posts/show"
+  end
+
   private
     def add_images( content )
       content.gsub( /\[IMG\s+(?<name>[^\]]+)\]/ ) do |m|
