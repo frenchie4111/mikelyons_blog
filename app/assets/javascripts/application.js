@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.turbolinks
 //= require highlight_js/highlight
 //= require highlight_js/languages/ruby
 //= require highlight_js/languages/cpp
