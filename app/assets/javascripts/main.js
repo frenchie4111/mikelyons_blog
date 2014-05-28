@@ -12,13 +12,25 @@ function startHideMenuTimer() {
     }, 1000 );
 }
 
+function setupGallery() {
+    $(".galleryimage").click(function( e ) {
+        $(".overlay").show();
+        $("#overlay_image").attr("src", $(e.target).attr("src") );
+    })
+
+    $(".overlay").click(function() {
+        $(".overlay").hide();
+    })
+}
+
 $(document).ready(function() {
     showMenu();
     startHideMenuTimer();
-    
+
     $("#header").hover(function() {
         showMenu();
     }, function() {
         startHideMenuTimer();
     });
+    setupGallery();
 });
