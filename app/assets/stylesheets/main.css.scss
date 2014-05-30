@@ -140,9 +140,14 @@ body
 
 .more_info
 {
-    color: #676D31;
+    color: black;
     font-size: 12px;
     font-weight: 300;
+}
+
+.more_info_link a:link, .more_info_link a:visited
+{
+    color: black;
 }
 
 .icons1
@@ -183,6 +188,7 @@ body
 
 .square_list
 {
+    color: black;
     list-style-type: square;
     padding: 0px 0px 0px 25px;
 }
@@ -191,6 +197,10 @@ body
 {
     font-weight: 400;
     text-decoration: none;
+    color: black;
+}
+
+.square_list a:link, .square_list a:visited {
     color: black;
 }
 
