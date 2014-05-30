@@ -3,6 +3,8 @@ body
     font-family: 'Lato', sans-serif;
     line-height: 140%;
     min-height: 100%;
+    color: black;
+    font-weight: 300;
 }
 
 .full_width
@@ -39,6 +41,7 @@ body
 #header
 {
     background-color: white;
+    font-weight: 400;
 }
 
 #name, #name:visited, #name:link
@@ -46,7 +49,7 @@ body
     float: left;
     font-size: 26px;
     margin: 10px 0 8px 8px;
-    color: #000;
+    // color: #000;
 }
 
 #menu
@@ -66,20 +69,15 @@ body
     margin: 0 10px 0 0;
 }
 
-.hover:link
+.hover:link, .hover:visited
 {
     text-decoration: none;
-    color: black;
-}
-
-.hover:visited
-{
-    color: black;
+    // color: black;
 }
 
 .hover:hover
 {
-    color: #8b8c83;
+    color: black;
     cursor: pointer;
 }
 
@@ -112,16 +110,14 @@ body
 
 #content_area h2
 {
-    color: #8b8c83;
     font-size: 20px;
-    border-bottom: solid 1px #8b8c83;
+    border-bottom: solid 1px;
     padding: 0 0 2px 0;
     margin: 0 0 15px 0;
 }
 
 #content_area h3, h3 a:visited, h3 a:link
 {
-    color: #8b8c83;
     font-size: 15px;
     margin: 0 0 5px 5px;
     text-decoration: none;
@@ -134,7 +130,7 @@ body
 
 #content_area b
 {
-    color: #8b8c83;
+    font-weight: normal;
 }
 
 .column_post
@@ -144,7 +140,7 @@ body
 
 .more_info
 {
-    color: #8b8c83;
+    color: #676D31;
     font-size: 12px;
     font-weight: 300;
 }
@@ -191,14 +187,22 @@ body
     padding: 0px 0px 0px 25px;
 }
 
-.square_list, a:link, a:visited
+.square_list b
 {
-    color: #8b8c83;
+    font-weight: 400;
+    text-decoration: none;
+    color: black;
+}
+
+a:link, a:visited {
     text-decoration: none;
 }
 
+.social_media a:link, .social_media a:visited {
+    color: black;
+}
+
 h4 {
-    color: #8b8c83;
     font-size: 20px;
     padding: 0 0 2px 0;
     margin: 0 0 15px 0;
@@ -233,3 +237,6 @@ body {
     max-height: 100%;
     max-width: 100%;
 }
+
+.colorchanger { color: black; }
+.color1 { color: #8D3131; border-color: black; }

@@ -1,32 +1,31 @@
 <%
 content_for :page_includes do
     stylesheet_link_tag('main') +
-    stylesheet_link_tag('main-variable') +
     javascript_include_tag('main')
 end
 %>
 
 <div class="column left one_third_width">
-    <h2>Featured Posts</h2>
+    <h2 class="colorchanger">Featured Posts</h2>
     <%= render partial: "partials/post", collection: @featured_posts %>
     <div class="clear"></div>
 </div>
 <div class="column left one_third_width">
-    <h2>Recent Posts</h2>
+    <h2 class="colorchanger">Recent Posts</h2>
     <%= render partial: "partials/post", collection: @recent_posts %>
     <h3 class="more_info_link"><a style="font-size:16px" href="/posts">See More Posts</a></h3>
     <div class="clear"></div>
 </div>
 <div class="column right one_third_width">
-    <h2>About Me</h2>
+    <h2 class="colorchanger">About Me</h2>
     <div class="column_post">
         <b>My name is Mike Lyons</b>
         , and I am a Software Engineering student at Rochester Institute of Technology. I am a dedicated and brilliant programmer who enjoys applying his programing knowledge to solve a variety of problems. I am currently looking for Co-ops or Internships as a software engineer.
         <br/><br/>
-        <a href="https://s3.amazonaws.com/mikelyons-blog/MikeLyonsResume.pdf">Click Here to view my Resume</a>
+        <a style="color: black;" href="https://s3.amazonaws.com/mikelyons-blog/MikeLyonsResume.pdf">Click Here to view my Resume</a>
     </div>
     <div class="column_spacer"></div>
-    <h2>Work Experience</h2>
+    <h2 class="colorchanger">Work Experience</h2>
     <div class="column_post">
       <ul class="square_list">
         <li><a href="http://www.apple.com/"><b>Apple</b> 2013-2014</a></li>
@@ -37,7 +36,7 @@ end
       <h3 class="more_info_link"><a style="font-size:16px" href="/posts/work">More Information</a></h3>
     </div>
     <div class="column_spacer"></div>
-    <h2>Find Me Elsewhere</h2>
+    <h2 class="colorchanger">Find Me Elsewhere</h2>
     <div class="recent_post social_media">
         <div><a href="mailto:mdl0394@gmail.com"><b><span class="social_media_link"><span class="icons2">M</span>Email:</span></b></a> The fastest way to contact me</div>
         <div><a href="https://www.linkedin.com/profile/view?id=219693399"><b><span class="social_media_link"><span class="icons1">I</span>LinkedIn:</span></b></a> Professional listing page</div>

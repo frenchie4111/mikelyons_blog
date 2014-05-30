@@ -1,17 +1,3 @@
-var menuTimer;
-
-function showMenu() {
-    window.clearInterval( menuTimer );
-    $("#hidden_menu").show('slide', {direction:"right"});
-}
-
-function startHideMenuTimer() {
-    window.clearInterval( menuTimer );
-    menuTimer = setInterval( function() {
-            $("#hidden_menu").hide('slide', {direction:"right"});
-    }, 1000 );
-}
-
 function setupGallery() {
     $(".galleryimage").click(function( e ) {
         $(".overlay").show();
@@ -23,16 +9,13 @@ function setupGallery() {
     })
 }
 
-$(document).ready(function() {
-    showMenu();
-    startHideMenuTimer();
+function changeColor() {
+    // $("body").addClass("color1");
+}
 
-    $("#header").hover(function() {
-        showMenu();
-    }, function() {
-        startHideMenuTimer();
-    });
+$(document).ready(function() {
     setupGallery();
+    changeColor();
 });
 
 $(document).on('page:change',  function() {

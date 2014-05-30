@@ -3,7 +3,7 @@
         <% if post.post_image then %>
         <%= image_tag post.post_image.image_url.to_s %>
         <% end %>
-        <%= link_to( post ) do %><b><%= post.title %></b><% end %>
+        <%= link_to( post ) do %><b style="color:black;"><%= post.title %></b><% end %>
         <%= post.subject %>
         <div class="clear"></div>
     </div>
